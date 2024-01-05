@@ -4,11 +4,7 @@ spring:
   application:
     name: ${APPLICATION_NAME:spring-security-keycloak}
 keycloak:
-#  auth-server-url: http://localhost:8282/auth
-#  realm: demo
-#  resource: backend
-#  public-client: true
-  auth-server-url: http://localhost:8484/auth
-  realm: my_realm
-  resource: my_client
+  auth-server-url: http://localhost:8282
+  realm: demo
+  resource: backend
   public-client: true
