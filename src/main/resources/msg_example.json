@@ -1,0 +1,12 @@
+{
+  "type": "test1",
+  "headers": {
+    "header1": "header1.value",
+    "header3": "header1.value",
+    "header4": "header1.value"
+  },
+  "payload": {
+    "body": "body value",
+    "other": "other value"
+  }
+}

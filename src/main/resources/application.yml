@@ -6,5 +6,5 @@ spring:
 keycloak:
   auth-server-url: http://localhost:8080
   realm: demo
-  resource: backend
+  resource: myclient
   public-client: true
