@@ -36,6 +36,7 @@ public class WebSecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/api/anonymous/**").permitAll()
+                .antMatchers("/actuator/**").permitAll()
                 .anyRequest().fullyAuthenticated();
     }
 }

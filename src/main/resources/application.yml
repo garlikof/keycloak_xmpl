@@ -14,3 +14,15 @@ keycloak:
   realm: demo
   resource: myclient
   public-client: true
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  health:
+    db:
+      enabled: true
+  endpoints:
+    web:
+      base-path: /actuator
+
