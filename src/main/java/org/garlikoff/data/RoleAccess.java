@@ -1,8 +1,7 @@
 package org.garlikoff.data;
 
+import jakarta.persistence.*;
 import lombok.Data;
-
-import javax.persistence.*;
 
 @Data
 @Entity(name = "meta_role_menu_access")
