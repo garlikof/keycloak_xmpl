@@ -8,9 +8,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 import java.util.ArrayList;
-import java.util.stream.Collectors;
-
-import static java.util.stream.Collectors.toList;
 
 @Data
 public class UserDetails {

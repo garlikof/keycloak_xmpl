@@ -1,7 +1,6 @@
 package org.garlikoff.data;
 
 import lombok.Data;
-import org.springframework.data.annotation.Reference;
 
 import javax.persistence.*;
 
