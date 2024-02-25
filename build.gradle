@@ -2,11 +2,28 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '2.7.0'
     id 'io.spring.dependency-management' version '1.1.4'
+    id 'com.google.cloud.tools.jib' version '3.4.0'//dockerize
 }
 
 group = 'org.garlikoff'
 version = '1.0-SNAPSHOT'
 
+
+java {
+    sourceCompatibility = '11'
+}
+
+
+jib {
+    to {
+        image = "garlikoff/rest-adapter:$version"
+    }
+}
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.garlikoff.restAdapter.Main'
+    }
+}
 
 repositories {
     maven  {
@@ -22,15 +39,19 @@ dependencies {
 
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
     implementation 'org.springframework.boot:spring-boot-starter-log4j2'
 
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
     implementation 'org.springframework.security:spring-security-oauth2-jose'
-//    implementation 'org.keycloak.bom:keycloak-adapter-bom:23.0.0'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.keycloak:keycloak-spring-boot-starter:23.0.0'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.postgresql:postgresql'
 }
 configurations {
     configureEach {
