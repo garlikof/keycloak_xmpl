@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: ${APPLICATION_NAME:spring-security-keycloak}
+  datasource:
+    #    url: jdbc:postgresql://ext-pg:5432/default_db
+    url: jdbc:postgresql://109.172.88.152:5432/default_db
+    username: meta
+    password: ?5&Ju7|m<i>LNT
 keycloak:
   auth-server-url: http://92.118.113.186:80
 #  auth-server-url: http://localhost:8080
